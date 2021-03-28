@@ -1,0 +1,10 @@
+{
+  "name": "@chant/footstone",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "vant": "^3.0.10",
+    "vue": "^3.0.7"
+  }
+}

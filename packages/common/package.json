@@ -1,0 +1,12 @@
+{
+  "name": "@chant/common",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^2.1.2"
+  },
+  "dependencies": {
+    "vue": "^3.0.7"
+  }
+}

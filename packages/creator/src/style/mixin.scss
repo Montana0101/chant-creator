@@ -1,0 +1,43 @@
+@mixin scroll-beautify {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    background-color: #eef1f6;
+    height: 3px;
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #8d9196;
+  }
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin hide-scroll {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+// 位置
+@mixin gravity-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin across-center {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
