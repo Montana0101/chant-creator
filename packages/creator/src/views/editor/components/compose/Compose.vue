@@ -3,6 +3,7 @@
     <draggable
       :list="state.list"
       @change="onChange"
+      v-bind="{ animation: 200 }"
       group="chant-drag"
       class="container"
     >

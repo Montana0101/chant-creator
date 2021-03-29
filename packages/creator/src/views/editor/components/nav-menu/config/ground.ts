@@ -7,7 +7,7 @@ export default [
       fontSize: '16',
       fontWeight: 'normal',
       height: '44',
-      width: 345
+      width: '345'
     }
   },
   {
