@@ -28,7 +28,6 @@
 import { computed, reactive } from 'vue'
 import { useStore } from 'vuex'
 import styleFit from '@/utils/style-fit'
-import { core } from '@chant/common/utils'
 
 type Nest = {
   element: object

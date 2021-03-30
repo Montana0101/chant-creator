@@ -8,18 +8,18 @@
     <!-- 画布 -->
     <compose></compose>
     <!-- 属性设置 -->
-    <attr-setting></attr-setting>
+    <custom-made></custom-made>
   </div>
 </template>
 
 <script lang="ts">
 import NavBar from './components/NavBar.vue'
-import NavMenu from './components/nav-menu/NavMenu.vue'
+import NavMenu from '@/components/nav-menu/NavMenu.vue'
 import Compose from './components/compose/Compose.vue'
-import AttrSetting from './components/attr-setting/AttrSetting.vue'
+import CustomMade from '@/components/custom-made/CustomMade.vue'
 
 export default {
-  components: { NavBar, NavMenu, Compose, AttrSetting },
+  components: { NavBar, NavMenu, Compose, CustomMade },
   created() {},
   methods: {}
 }

@@ -3,11 +3,7 @@
 </template>
 
 <script>
-export default {
-  created() {
-    const test = 123
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

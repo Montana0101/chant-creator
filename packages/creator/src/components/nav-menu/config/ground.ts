@@ -21,6 +21,16 @@ export default [
     }
   },
   {
+    component: 'chant-swipe',
+    label: '轮播图',
+    events: {},
+    style: {
+      fontSize: '16',
+      fontWeight: 'normal',
+      height: '150'
+    }
+  },
+  {
     component: 'chant-text',
     label: '文本',
     events: {},

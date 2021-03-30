@@ -2,6 +2,8 @@
   <div class="attr-setting">
     <div class="title">属性设置</div>
     <el-form label-width="80px" label-position="left">
+      <!-- 专业定制 -->
+      <!-- 样式设置 -->
       <el-form-item
         v-for="(val, key) of current.style"
         :key="key"
@@ -19,7 +21,7 @@ import { useStore } from 'vuex'
 import { AnyObject } from '@/type'
 
 export default {
-  name: 'attr-setting',
+  name: 'custom-made',
   setup() {
     const store = useStore()
     const current = computed(() => store.state.editor.current)
