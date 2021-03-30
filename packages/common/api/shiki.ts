@@ -46,17 +46,17 @@ class Shiki {
   private baseurl = apiUrl.base
   // 请求拦截器
   private requestInterceptors: Function[] = []
-  // 相应拦截器
+  // 响应拦截器
   private responseInterceptors: Function[] = []
   // 拦截器
   interceptors = {
     request: {
-      use(callback: Function) {
+      use: (callback: Function) => {
         this.requestInterceptors.push(callback)
       }
     },
     response: {
-      use(callback: Function) {
+      use: (callback: Function) => {
         this.responseInterceptors.push(callback)
       }
     }
@@ -223,7 +223,7 @@ class Shiki {
       requestInit = callback(requestInit)
     })
     // 请求地址拼接
-    let url = config.url
+    let url = config.url || ''
     if (url.indexOf('http') !== 0) {
       url = `${this.baseurl}${url}`
     }

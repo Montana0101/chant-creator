@@ -46,7 +46,7 @@ class Storage {
     sessionStorage.clear()
   }
   // 获取key
-  private getKey(key) {
+  private getKey(key: string) {
     return `${this.prefix}${key}`
   }
   // 获取值

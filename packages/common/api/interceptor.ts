@@ -5,6 +5,6 @@ shiki.interceptors.request.use((config: RequestInit) => {
   return config
 })
 // 响应拦截器
-shiki.interceptors.response.use((response: any) => {
+shiki.interceptors.response.use((response: Response) => {
   return response
 })
