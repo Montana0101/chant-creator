@@ -1,5 +1,5 @@
 <template>
-  <van-field placeholder="请输入用户名" />
+  <van-field class="test" placeholder="请输入用户名" />
 </template>
 
 <script>
@@ -8,4 +8,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.test {
+  display: flex;
+  align-items: center;
+}
+</style>
