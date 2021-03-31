@@ -8,8 +8,16 @@
 </template>
 
 <script lang="ts">
+import { Swipe, SwipeItem } from 'vant'
+import 'vant/es/swipe/style'
+import 'vant/es/swipe-item/style'
+
 export default {
   name: 'chant-swipe',
+  components: {
+    [Swipe.name]: Swipe,
+    [SwipeItem.name]: SwipeItem
+  },
   setup() {
     function onSwiper(swiper: any) {
       console.log(swiper)

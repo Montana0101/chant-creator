@@ -4,10 +4,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { App } from 'vue'
+import { Button } from 'vant'
+import 'vant/es/button/style'
+
 export default {
   name: 'chant-button',
-  inheritAttrs: false
+  inheritAttrs: false,
+  components: {
+    [Button.name]: Button
+  }
 }
 </script>
 

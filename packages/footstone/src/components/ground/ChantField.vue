@@ -2,9 +2,15 @@
   <van-field class="test" placeholder="请输入用户名" />
 </template>
 
-<script>
+<script lang="ts">
+import { Field } from 'vant'
+import 'vant/es/field/style'
+
 export default {
-  name: 'chant-field'
+  name: 'chant-field',
+  components: {
+    [Field.name]: Field
+  }
 }
 </script>
 
