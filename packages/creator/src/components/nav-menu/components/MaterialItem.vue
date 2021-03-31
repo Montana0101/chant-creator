@@ -24,9 +24,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/variable.scss';
-@import '@/style/mixin.scss';
-
 .list {
   border: 2px solid $athens-gray;
   cursor: move;

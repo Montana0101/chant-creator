@@ -31,8 +31,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/mixin.scss';
-
 .menu-draggable {
   @include scroll-beautify;
 

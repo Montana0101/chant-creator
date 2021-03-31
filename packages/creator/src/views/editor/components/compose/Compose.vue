@@ -78,9 +78,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/mixin.scss';
-@import '@/style/variable.scss';
-
 .compose {
   @include hide-scroll;
 
