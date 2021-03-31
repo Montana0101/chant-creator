@@ -8,7 +8,7 @@
     <!-- 画布 -->
     <compose></compose>
     <!-- 自定义属性 -->
-    <custom-made></custom-made>
+    <custom-setting></custom-setting>
   </div>
 </template>
 
@@ -16,10 +16,10 @@
 import NavBar from '@/components/nav-bar/NavBar.vue'
 import NavMenu from '@/components/nav-menu/NavMenu.vue'
 import Compose from '@/components/compose/Compose.vue'
-import CustomMade from '@/components/custom-made/CustomMade.vue'
+import CustomSetting from '@/components/custom-setting/CustomSetting.vue'
 
 export default {
-  components: { NavBar, NavMenu, Compose, CustomMade },
+  components: { NavBar, NavMenu, Compose, CustomSetting },
   created() {},
   methods: {}
 }

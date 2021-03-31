@@ -20,7 +20,7 @@ import { NavMenuConfig } from '@/type'
 import loader from './util/loader'
 
 export default {
-  name: 'custom-made',
+  name: 'custom-setting',
   components: loader,
   setup() {
     const store = useStore()

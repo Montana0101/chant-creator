@@ -14,5 +14,6 @@ export default {}
 #app {
   height: 100vh;
   overflow: hidden;
+  min-width: 988px;
 }
 </style>
