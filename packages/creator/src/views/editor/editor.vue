@@ -7,7 +7,7 @@
     <nav-menu></nav-menu>
     <!-- 画布 -->
     <compose></compose>
-    <!-- 属性设置 -->
+    <!-- 自定义属性 -->
     <custom-made></custom-made>
   </div>
 </template>

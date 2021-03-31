@@ -1,8 +1,7 @@
 <template>
-  <div class="attr-setting">
+  <div class="custom-made">
     <div class="title">属性设置</div>
     <el-form label-width="80px" label-position="left">
-      <!-- 专业定制 -->
       <!-- 样式设置 -->
       <el-form-item
         v-for="(val, key) of current.style"
@@ -44,7 +43,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/style/variable.scss';
 
-.attr-setting {
+.custom-made {
   box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 30px 20px;
   position: relative;
