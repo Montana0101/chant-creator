@@ -3,6 +3,7 @@ export default [
     component: 'chant-button',
     label: '按钮',
     events: {},
+    attr: { abc: 123 },
     style: {
       fontSize: '16',
       fontWeight: 'normal',
@@ -14,6 +15,7 @@ export default [
     component: 'chant-field',
     label: '输入框',
     events: {},
+    attr: { abc: 123 },
     style: {
       fontSize: '16',
       fontWeight: 'normal',
@@ -24,6 +26,7 @@ export default [
     component: 'chant-swipe',
     label: '轮播图',
     events: {},
+    attr: { abc: 123 },
     style: {
       fontSize: '16',
       fontWeight: 'normal',

@@ -2,6 +2,11 @@
   <div class="custom-made">
     <div class="title">属性设置</div>
     <el-form label-width="80px" label-position="left">
+      <!-- 轮播图设置 -->
+      <swipe-setting v-if="current.component === 'chant-swipe'">
+      </swipe-setting>
+      <!-- 属性设置 -->
+      <attr-setting></attr-setting>
       <!-- 样式设置 -->
       <style-setting></style-setting>
     </el-form>
@@ -9,12 +14,23 @@
 </template>
 
 <script lang="ts">
-import StyleSetting from './StyleSetting.vue'
+import { computed, ComputedRef } from 'vue'
+import { useStore } from 'vuex'
+import { NavMenuConfig } from '@/type'
+import loader from './util/loader'
 
 export default {
   name: 'custom-made',
-  components: { StyleSetting },
-  setup() {}
+  components: loader,
+  setup() {
+    const store = useStore()
+    // 当前编辑的组件信息
+    const current: ComputedRef<NavMenuConfig> = computed(
+      () => store.state.editor.current
+    )
+
+    return { current }
+  }
 }
 </script>
 

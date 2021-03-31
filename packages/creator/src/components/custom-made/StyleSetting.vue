@@ -1,10 +1,10 @@
 <template>
   <el-form-item
-    v-for="(val, key) of current.style"
+    v-for="(val, key) of currentStyle"
     :key="key"
     :label="attarToName(key)"
   >
-    <el-input v-model="current.style[key]"></el-input>
+    <el-input v-model="currentStyle[key]"></el-input>
   </el-form-item>
 </template>
 
@@ -17,7 +17,7 @@ export default {
   name: 'style-setting',
   setup() {
     const store = useStore()
-    const current = computed(() => store.state.editor.current)
+    const currentStyle = computed(() => store.state.editor.current.style)
     // 样式属性转为汉字
     function attarToName(key: string | number) {
       const map: AnyObject = {
@@ -29,7 +29,7 @@ export default {
       return map[key]
     }
 
-    return { current, attarToName }
+    return { currentStyle, attarToName }
   }
 }
 </script>
