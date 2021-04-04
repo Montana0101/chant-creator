@@ -48,7 +48,8 @@ export default [
     style: {
       display: 'inline-block',
       fontSize: '16',
-      fontWeight: 'normal'
+      fontWeight: 'normal',
+      padding: '5'
     }
   }
 ]

@@ -11,6 +11,8 @@ export default {
       'height',
       'left',
       'letterSpacing',
+      'margin',
+      'padding',
       'top',
       'width'
     ]

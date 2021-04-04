@@ -22,6 +22,8 @@ export default {
         fontSize: '文字大小',
         fontWeight: '文字粗细',
         height: '高度',
+        margin: '外边距',
+        padding: '内边距',
         width: '宽度'
       }
       return map[key]
