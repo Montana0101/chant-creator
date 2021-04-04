@@ -11,8 +11,8 @@
     "@chant/footstone": "1.0.0",
     "element-plus": "^1.0.2-beta.33",
     "vue": "^3.0.7",
-    "vue-draggable-next": "^2.0.1",
     "vue-router": "^4.0.4",
+    "vuedraggable": "^4.0.1",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

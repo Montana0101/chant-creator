@@ -4,22 +4,24 @@
       :list="state.list"
       @change="onChange"
       v-bind="{ animation: 200 }"
-      group="chant-drag"
+      item-key="name"
+      group="drag-compose"
       class="container"
     >
-      <div
-        v-for="(item, index) in state.list"
-        :key="index"
-        @click="setCurrentIndex(index)"
-        :class="{ active: state.currentIndex === index }"
-        class="shell"
-      >
-        <component
-          :is="item.component"
-          :style="getStyle(item.style)"
-          :attr="item.attr"
-        />
-      </div>
+      <template #item="{ element, index }">
+        <div
+          @click="setCurrentIndex(index)"
+          :style="{ display: element.style.display }"
+          :class="{ active: state.currentIndex === index }"
+          class="shell"
+        >
+          <component
+            :is="element.component"
+            :style="getStyle(element.style)"
+            :attr="element.attr"
+          />
+        </div>
+      </template>
     </draggable>
   </div>
 </template>
@@ -89,8 +91,6 @@ export default {
     @include hide-scroll;
 
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
     height: 667px;
     margin: 50px 0;
     width: 375px;

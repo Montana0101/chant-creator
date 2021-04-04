@@ -1,5 +1,5 @@
 <template>
-  <van-field class="test" placeholder="请输入用户名" />
+  <van-field class="field" placeholder="请输入用户名" />
 </template>
 
 <script lang="ts">
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.test {
+.field {
   display: flex;
   align-items: center;
 }

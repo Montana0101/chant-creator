@@ -1,7 +1,7 @@
 <template>
-  <div v-for="(item, index) in state.list" :key="index" class="list">
+  <div class="list">
     <div class="cover">封面</div>
-    <div class="bottom">{{ item.label }}组件</div>
+    <div class="bottom">{{ state.row.label }}</div>
   </div>
 </template>
 
@@ -11,11 +11,11 @@ import { reactive } from 'vue'
 export default {
   name: 'material-item',
   props: {
-    list: Array
+    row: Object
   },
   setup(props) {
     const state = reactive({
-      list: props.list as any[]
+      row: props.row as Record<string, any>
     })
 
     return { state }

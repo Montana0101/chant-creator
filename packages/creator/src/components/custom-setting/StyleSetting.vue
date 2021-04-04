@@ -1,11 +1,9 @@
 <template>
-  <el-form-item
-    v-for="(val, key) of currentStyle"
-    :key="key"
-    :label="attarToName(key)"
-  >
-    <el-input v-model="currentStyle[key]"></el-input>
-  </el-form-item>
+  <template v-for="(val, key) of currentStyle" :key="key">
+    <el-form-item v-if="attarToName(key)" :label="attarToName(key)">
+      <el-input v-model="currentStyle[key]"></el-input>
+    </el-form-item>
+  </template>
 </template>
 
 <script lang="ts">
