@@ -1,7 +1,7 @@
 <template>
   <div class="custom-made">
     <div class="title">属性设置</div>
-    <el-form label-width="80px" label-position="left">
+    <el-form label-width="110px" label-position="left">
       <!-- 轮播图设置 -->
       <swipe-setting v-if="current.component === 'chant-swipe'">
       </swipe-setting>

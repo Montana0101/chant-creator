@@ -5,10 +5,10 @@ export default [
     events: {},
     attr: { abc: 123 },
     style: {
-      fontSize: '16',
+      fontSize: 16,
       fontWeight: 'normal',
-      height: '44',
-      width: '345'
+      height: 44,
+      width: 345
     }
   },
   {
@@ -17,29 +17,27 @@ export default [
     events: {},
     attr: { abc: 123 },
     style: {
-      fontSize: '16',
+      fontSize: 16,
       fontWeight: 'normal',
-      height: '44'
+      height: 44
     }
   },
   {
     component: 'chant-swipe',
     label: '轮播图',
     events: {},
-    attr: { abc: 123 },
+    attr: { autoplay: 3000, loop: true, vertical: false },
     style: {
-      fontSize: '16',
-      fontWeight: 'normal',
-      height: '150'
+      borderRadius: 0,
+      height: 110
     }
   },
   {
     component: 'chant-text',
     label: '文本',
     events: {},
-    attr: { abc: 123 },
     style: {
-      fontSize: '16',
+      fontSize: 16,
       fontWeight: 'normal'
     }
   }

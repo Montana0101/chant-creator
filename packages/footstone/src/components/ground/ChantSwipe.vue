@@ -1,5 +1,10 @@
 <template>
-  <van-swipe class="chant-swipe" :autoplay="3000" indicator-color="white">
+  <van-swipe
+    :autoplay="state.autoplay"
+    :loop="state.loop"
+    :vertical="state.vertical"
+    indicator-color="white"
+  >
     <van-swipe-item>1</van-swipe-item>
     <van-swipe-item>2</van-swipe-item>
     <van-swipe-item>3</van-swipe-item>
@@ -8,6 +13,7 @@
 </template>
 
 <script lang="ts">
+import { reactive } from 'vue'
 import { Swipe, SwipeItem } from 'vant'
 import 'vant/es/swipe/style'
 import 'vant/es/swipe-item/style'
@@ -18,14 +24,14 @@ export default {
     [Swipe.name]: Swipe,
     [SwipeItem.name]: SwipeItem
   },
-  setup() {
-    function onSwiper(swiper: any) {
-      console.log(swiper)
-    }
-    function onSlideChange() {
-      console.log('slide change')
-    }
-    return { onSwiper, onSlideChange }
+  props: {
+    attr: Object
+  },
+  setup(props) {
+    const attr = props.attr as Record<string, any>
+    const state = reactive(attr)
+
+    return { state }
   }
 }
 </script>

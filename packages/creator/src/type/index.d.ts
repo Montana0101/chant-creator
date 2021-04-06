@@ -1,7 +1,3 @@
-export type AnyObject = {
-  [key: string]: any
-}
-
 export type NavMenuConfig = {
   component: string
   label: string
