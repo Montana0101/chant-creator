@@ -1,9 +1,17 @@
 export default [
   {
+    component: 'chant-img',
+    label: '图片',
+    layout: true,
+    events: {},
+    style: {
+      width: '100%'
+    }
+  },
+  {
     component: 'chant-button',
     label: '按钮',
     events: {},
-    attr: { abc: 123 },
     style: {
       fontSize: 16,
       fontWeight: 'normal',
@@ -15,7 +23,6 @@ export default [
     component: 'chant-field',
     label: '输入框',
     events: {},
-    attr: { abc: 123 },
     style: {
       fontSize: 16,
       fontWeight: 'normal',
@@ -35,10 +42,13 @@ export default [
   {
     component: 'chant-text',
     label: '文本',
+    layout: true,
     events: {},
     style: {
-      fontSize: 16,
-      fontWeight: 'normal'
+      display: 'inline-block',
+      fontSize: '16',
+      fontWeight: 'normal',
+      padding: '5'
     }
   }
 ]

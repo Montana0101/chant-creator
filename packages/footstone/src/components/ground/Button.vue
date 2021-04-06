@@ -1,11 +1,10 @@
 <template>
-  <div class="t-a-c">
+  <div class="chant-button">
     <van-button v-bind="$attrs" type="primary">主要按钮</van-button>
   </div>
 </template>
 
 <script lang="ts">
-import { App } from 'vue'
 import { Button } from 'vant'
 import 'vant/es/button/style'
 
@@ -18,4 +17,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.chant-button {
+  text-align: center;
+}
+</style>

@@ -1,11 +1,9 @@
 <template>
-  <el-form-item
-    v-for="(val, key) of currentStyle"
-    :key="key"
-    :label="attarToName(key)"
-  >
-    <el-input v-model="currentStyle[key]"></el-input>
-  </el-form-item>
+  <template v-for="(val, key) of currentStyle" :key="key">
+    <el-form-item v-if="attarToName(key)" :label="attarToName(key)">
+      <el-input v-model="currentStyle[key]"></el-input>
+    </el-form-item>
+  </template>
 </template>
 
 <script lang="ts">
@@ -24,6 +22,8 @@ export default {
         fontSize: '文字大小',
         fontWeight: '文字粗细',
         height: '高度',
+        margin: '外边距',
+        padding: '内边距',
         width: '宽度'
       }
       return map[key]

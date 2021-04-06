@@ -3,15 +3,19 @@
     :list="state.list"
     :group="state.group"
     :sort="false"
+    item-key="name"
     class="menu-draggable"
   >
-    <material-item :list="state.list"> </material-item>
+    <template #item="{ element }">
+      <material-item :row="element"> </material-item>
+    </template>
   </draggable>
 </template>
 
 <script lang="ts">
 import { reactive } from 'vue'
 import MaterialItem from './MaterialItem.vue'
+import { NavMenuConfig } from '@/type'
 
 export default {
   name: 'draggable-box',
@@ -21,8 +25,8 @@ export default {
   },
   setup(props) {
     const state = reactive({
-      list: props.list,
-      group: { name: 'chant-drag', pull: 'clone', put: false }
+      list: props.list as unknown[],
+      group: { name: 'drag-compose', pull: 'clone', put: false }
     })
 
     return { state }
