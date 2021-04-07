@@ -1,5 +1,25 @@
 export default [
   {
+    component: 'chant-swipe',
+    label: '轮播图',
+    events: {},
+    attr: {
+      autoplay: 3000,
+      loop: true,
+      vertical: false,
+      imgList: [
+        { url: 'xxx', title: '标题1', describe: '描述1' },
+        { url: 'xxx', title: '标题2', describe: '描述2' }
+      ]
+    },
+    style: {
+      borderRadius: 0,
+      height: 110,
+      margin: 0,
+      padding: 0
+    }
+  },
+  {
     component: 'chant-img',
     label: '图片',
     layout: true,
@@ -30,25 +50,15 @@ export default [
     }
   },
   {
-    component: 'chant-swipe',
-    label: '轮播图',
-    events: {},
-    attr: { autoplay: 3000, loop: true, vertical: false },
-    style: {
-      borderRadius: 0,
-      height: 110
-    }
-  },
-  {
     component: 'chant-text',
     label: '文本',
     layout: true,
     events: {},
     style: {
       display: 'inline-block',
-      fontSize: '16',
+      fontSize: 16,
       fontWeight: 'normal',
-      padding: '5'
+      padding: 5
     }
   }
 ]

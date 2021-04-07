@@ -14,8 +14,8 @@ export default {
   }),
   mutations: {
     // 设置组件列表
-    setComponentList(state: State, list: object[]) {
-      list.forEach((item: any) => {
+    setComponentList(state: State, list: Record<string, any>[]) {
+      list.forEach((item: Record<string, any>) => {
         if (!item.id) {
           item.id = base.uid()
         }

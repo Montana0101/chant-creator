@@ -4,7 +4,7 @@
       :list="state.list"
       @change="onChange"
       v-bind="{ animation: 200 }"
-      item-key="name"
+      item-key="id"
       group="drag-compose"
       class="container"
     >

@@ -1,18 +1,18 @@
 <template>
-  <draggable-box :list="list">
+  <drag-box :list="list">
     <div v-for="item in list" :key="item.id" class="item">
       组件{{ item.id }}
     </div>
-  </draggable-box>
+  </drag-box>
 </template>
 
 <script lang="ts">
 import { reactive } from 'vue'
-import DraggableBox from './components/DraggableBox.vue'
+import DragBox from './components/DragBox.vue'
 
 export default {
   name: 'chart',
-  components: { DraggableBox },
+  components: { DragBox },
   setup() {
     const list: any[] = reactive([])
     for (let i = 0; i < 8; i++) {

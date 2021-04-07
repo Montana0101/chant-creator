@@ -3,7 +3,7 @@
     :list="state.list"
     :group="state.group"
     :sort="false"
-    item-key="name"
+    item-key="id"
     class="menu-draggable"
   >
     <template #item="{ element }">
@@ -15,10 +15,9 @@
 <script lang="ts">
 import { reactive } from 'vue'
 import MaterialItem from './MaterialItem.vue'
-import { NavMenuConfig } from '@/type'
 
 export default {
-  name: 'draggable-box',
+  name: 'drag-box',
   components: { MaterialItem },
   props: {
     list: Array
