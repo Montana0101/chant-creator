@@ -1,9 +1,8 @@
 import { core } from '@chant/common/utils'
-import { AnyObject } from '@/type'
 
 export default {
   // 单位添加px
-  toPx(style: AnyObject) {
+  toPx(style: Record<string, any>) {
     const unit = [
       'borderRadius',
       'borderWidth',
