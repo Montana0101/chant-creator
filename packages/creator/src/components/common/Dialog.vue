@@ -18,7 +18,7 @@ export default {
   },
   setup(props) {
     const state = reactive({
-      visible: true,
+      visible: false,
       title: props.title
     })
 
