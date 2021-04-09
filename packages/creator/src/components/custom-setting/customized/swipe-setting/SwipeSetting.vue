@@ -23,16 +23,19 @@
     >
     </drag-handle>
   </el-form-item>
+  <!-- 图片 -->
+  <img-edit></img-edit>
 </template>
 
 <script lang="ts">
 import { computed } from 'vue'
 import { useStore } from 'vuex'
 import DragHandle from '@/components/drag/DragHandle.vue'
+import ImgEdit from './ImgEdit.vue'
 
 export default {
   name: 'swipe-setting',
-  components: { DragHandle },
+  components: { DragHandle, ImgEdit },
   setup() {
     const store = useStore()
     const current = store.state.editor.current

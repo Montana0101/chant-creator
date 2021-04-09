@@ -1,6 +1,7 @@
 import { App } from 'vue'
 import {
   ElButton,
+  ElDialog,
   ElForm,
   ElFormItem,
   ElIcon,
@@ -13,6 +14,7 @@ import {
 } from 'element-plus'
 
 import 'element-plus/lib/theme-chalk/el-button.css'
+import 'element-plus/lib/theme-chalk/el-dialog.css'
 import 'element-plus/lib/theme-chalk/el-form.css'
 import 'element-plus/lib/theme-chalk/el-form-item.css'
 import 'element-plus/lib/theme-chalk/el-icon.css'
@@ -26,6 +28,7 @@ import 'element-plus/lib/theme-chalk/el-tab-pane.css'
 // element组件注册
 function elementLoader(app: App<Element>) {
   app.component(ElButton.name, ElButton)
+  app.component(ElDialog.name, ElDialog)
   app.component(ElForm.name, ElForm)
   app.component(ElFormItem.name, ElFormItem)
   app.component(ElIcon.name, ElIcon)
