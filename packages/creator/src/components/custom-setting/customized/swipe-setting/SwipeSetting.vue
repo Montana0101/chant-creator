@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue'
+import { computed, reactive } from 'vue'
 import { useStore } from 'vuex'
 import DragHandle from '@/components/drag/DragHandle.vue'
 import ImgEdit from './ImgEdit.vue'
@@ -38,8 +38,14 @@ export default {
   components: { DragHandle, ImgEdit },
   setup() {
     const store = useStore()
+    // state
+    const state = reactive({
+      imgEditVisible: false
+    })
+    // current
     const current = store.state.editor.current
     const currentAttr = computed(() => current.attr)
+
     // 图片编辑
     function onEdit() {}
     // 图片删除
@@ -47,7 +53,7 @@ export default {
     // 图片新增
     function onAdd() {}
 
-    return { currentAttr, onEdit, onDelete, onAdd }
+    return { state, currentAttr, onEdit, onDelete, onAdd }
   }
 }
 </script>
