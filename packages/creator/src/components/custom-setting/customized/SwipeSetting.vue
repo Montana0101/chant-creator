@@ -15,7 +15,13 @@
     <el-radio v-model="currentAttr.vertical" :label="true">纵向</el-radio>
   </el-form-item>
   <el-form-item label="图片列表">
-    <drag-handle :list="currentAttr.imgList"></drag-handle>
+    <drag-handle
+      :list="currentAttr.imgList"
+      @edit="onEdit"
+      @delete="onDelete"
+      @add="onAdd"
+    >
+    </drag-handle>
   </el-form-item>
 </template>
 
@@ -29,9 +35,16 @@ export default {
   components: { DragHandle },
   setup() {
     const store = useStore()
-    const currentAttr = computed(() => store.state.editor.current.attr)
+    const current = store.state.editor.current
+    const currentAttr = computed(() => current.attr)
+    // 图片编辑
+    function onEdit() {}
+    // 图片删除
+    function onDelete() {}
+    // 图片新增
+    function onAdd() {}
 
-    return { currentAttr }
+    return { currentAttr, onEdit, onDelete, onAdd }
   }
 }
 </script>

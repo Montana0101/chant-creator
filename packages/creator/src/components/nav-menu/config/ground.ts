@@ -1,4 +1,5 @@
 export default [
+  // 轮播图
   {
     component: 'chant-swipe',
     label: '轮播图',
@@ -19,6 +20,7 @@ export default [
       padding: 0
     }
   },
+  // 图片
   {
     component: 'chant-img',
     label: '图片',
@@ -28,6 +30,7 @@ export default [
       width: '100%'
     }
   },
+  // 按钮
   {
     component: 'chant-button',
     label: '按钮',
@@ -39,6 +42,7 @@ export default [
       width: 345
     }
   },
+  // 输入框
   {
     component: 'chant-field',
     label: '输入框',
@@ -49,6 +53,7 @@ export default [
       height: 44
     }
   },
+  // 文本
   {
     component: 'chant-text',
     label: '文本',

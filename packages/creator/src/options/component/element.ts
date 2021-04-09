@@ -3,6 +3,7 @@ import {
   ElButton,
   ElForm,
   ElFormItem,
+  ElIcon,
   ElInput,
   ElRadio,
   ElSelect,
@@ -14,6 +15,7 @@ import {
 import 'element-plus/lib/theme-chalk/el-button.css'
 import 'element-plus/lib/theme-chalk/el-form.css'
 import 'element-plus/lib/theme-chalk/el-form-item.css'
+import 'element-plus/lib/theme-chalk/el-icon.css'
 import 'element-plus/lib/theme-chalk/el-input.css'
 import 'element-plus/lib/theme-chalk/el-radio.css'
 import 'element-plus/lib/theme-chalk/el-select.css'
@@ -26,6 +28,7 @@ function elementLoader(app: App<Element>) {
   app.component(ElButton.name, ElButton)
   app.component(ElForm.name, ElForm)
   app.component(ElFormItem.name, ElFormItem)
+  app.component(ElIcon.name, ElIcon)
   app.component(ElInput.name, ElInput)
   app.component(ElRadio.name, ElRadio)
   app.component(ElSelect.name, ElSelect)
