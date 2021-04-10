@@ -24,7 +24,11 @@
     </drag-handle>
   </el-form-item>
   <!-- 图片编辑 -->
-  <img-edit v-model="state.imgEditVisible"> </img-edit>
+  <img-edit
+    v-model="state.imgEditVisible"
+    v-model:row="currentAttr.imgList[state.imgEditIndex]"
+  >
+  </img-edit>
 </template>
 
 <script lang="ts">
@@ -40,20 +44,33 @@ export default {
     const store = useStore()
     // state
     const state = reactive({
+      imgEditIndex: 0,
       imgEditVisible: false
     })
     // current
     const current = store.state.editor.current
+    const currentImgList = current.attr.imgList
     const currentAttr = computed(() => current.attr)
 
     // 图片编辑
-    function onEdit() {
+    function onEdit(index: number) {
+      state.imgEditIndex = index
       state.imgEditVisible = true
     }
     // 图片删除
-    function onDelete() {}
+    function onDelete(index: number) {
+      currentImgList.splice(index, 1)
+    }
     // 图片新增
-    function onAdd() {}
+    function onAdd() {
+      const row = {
+        title: '标题',
+        describe: '描述',
+        url: '',
+        imgUrl: ''
+      }
+      currentImgList.push(row)
+    }
 
     return { state, currentAttr, onEdit, onDelete, onAdd }
   }

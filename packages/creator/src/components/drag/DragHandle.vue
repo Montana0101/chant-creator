@@ -6,14 +6,14 @@
       v-bind="{ animation: 200 }"
       item-key="url"
     >
-      <template #item="{ element }">
+      <template #item="{ element, index }">
         <div class="item">
-          <div class="title">{{ element.title }}</div>
-          <div class="describe">{{ element.describe }}</div>
+          <div class="title ellipsis-1">{{ element.title }}</div>
+          <div class="describe ellipsis-1">{{ element.describe }}</div>
           <!-- 鼠标悬浮显示的功能菜单 -->
           <div class="menu vertically">
-            <i @click="onEdit" class="el-icon-edit"></i>
-            <i @click="onDelete" class="el-icon-delete"></i>
+            <i @click="onEdit(index)" class="el-icon-edit"></i>
+            <i @click="onDelete(index)" class="el-icon-delete"></i>
             <i class="el-icon-rank handle"></i>
           </div>
         </div>
@@ -36,8 +36,8 @@ export default {
   emits: ['edit', 'delete', 'add'],
   setup(props, context) {
     // 编辑
-    function onEdit() {
-      context.emit('edit')
+    function onEdit(index: number) {
+      context.emit('edit', index)
     }
     // 删除
     function onDelete() {

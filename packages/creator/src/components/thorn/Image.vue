@@ -1,15 +1,15 @@
 <template>
-  <img src="" />
+  <el-image :src="url"></el-image>
 </template>
 
-<script langt="ts">
+<script lang="ts">
 export default {
-  name: 'chant-img',
+  name: 'thorn-image',
   props: {
-    attr: Object
+    url: String
   },
   setup(props) {
-    console.log(props.attr)
+    return { url: props.url }
   }
 }
 </script>

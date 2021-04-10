@@ -4,6 +4,7 @@
     :title="state.title"
     :close-on-click-modal="false"
     destroy-on-close
+    @open="onOpen"
     @close="onClose"
   >
     <slot></slot>
@@ -21,13 +22,17 @@ export default {
   props: {
     title: String
   },
-  emits: ['close', 'next'],
+  emits: ['open', 'close', 'next'],
   setup(props, context) {
     const state = reactive({
       visible: false,
       title: props.title
     })
-    // dialog关闭
+    // 打开
+    function onOpen() {
+      context.emit('open')
+    }
+    // 关闭
     function onClose() {
       context.emit('close')
     }
@@ -36,7 +41,7 @@ export default {
       context.emit('next')
     }
 
-    return { state, onClose, onNext }
+    return { state, onOpen, onClose, onNext }
   }
 }
 </script>

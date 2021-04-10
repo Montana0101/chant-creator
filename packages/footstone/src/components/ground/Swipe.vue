@@ -5,10 +5,9 @@
     :vertical="state.vertical"
     indicator-color="white"
   >
-    <van-swipe-item>1</van-swipe-item>
-    <van-swipe-item>2</van-swipe-item>
-    <van-swipe-item>3</van-swipe-item>
-    <van-swipe-item>4</van-swipe-item>
+    <van-swipe-item v-for="item in state.imgList" :key="item.url">
+      <chant-image :url="item.imgUrl"> </chant-image>
+    </van-swipe-item>
   </van-swipe>
 </template>
 

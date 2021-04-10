@@ -8,10 +8,7 @@ export default [
       autoplay: 3000,
       loop: true,
       vertical: false,
-      imgList: [
-        { url: 'xxx', title: '标题1', describe: '描述1' },
-        { url: 'xxx', title: '标题2', describe: '描述2' }
-      ]
+      imgList: [{ title: '标题', describe: '描述', url: '', imgUrl: '' }]
     },
     style: {
       borderRadius: 0,
