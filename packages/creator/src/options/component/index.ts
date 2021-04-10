@@ -9,11 +9,11 @@ function component(app: App<Element>) {
   // element-ui加载
   elementLoader(app)
   // 共用组件加载
-  commonLoader(app)
+  thornLoader(app)
 }
 // 共用组件加载
-function commonLoader(app: App<Element>) {
-  const modules = import.meta.globEager('../../components/common/**')
+function thornLoader(app: App<Element>) {
+  const modules = import.meta.globEager('../../components/thorn/**')
   for (const path in modules) {
     const flesh = modules[path].default
     app.component(flesh.name, flesh)

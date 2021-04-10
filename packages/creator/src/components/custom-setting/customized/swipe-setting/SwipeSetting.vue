@@ -23,8 +23,8 @@
     >
     </drag-handle>
   </el-form-item>
-  <!-- 图片 -->
-  <img-edit></img-edit>
+  <!-- 图片编辑 -->
+  <img-edit v-model="state.imgEditVisible"> </img-edit>
 </template>
 
 <script lang="ts">
@@ -47,7 +47,9 @@ export default {
     const currentAttr = computed(() => current.attr)
 
     // 图片编辑
-    function onEdit() {}
+    function onEdit() {
+      state.imgEditVisible = true
+    }
     // 图片删除
     function onDelete() {}
     // 图片新增
