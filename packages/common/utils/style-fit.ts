@@ -1,4 +1,4 @@
-import { core } from '@chant/common/utils'
+import core from './core'
 
 export default {
   // 单位添加px

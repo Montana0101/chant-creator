@@ -29,7 +29,7 @@
 <script lang="ts">
 import { computed, reactive } from 'vue'
 import { useStore } from 'vuex'
-import styleFit from '@/utils/style-fit'
+import { styleFit } from '@chant/common/utils'
 
 type Nest = {
   element: object

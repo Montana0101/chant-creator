@@ -1,27 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <component
+    v-for="item in componentList"
+    :key="item.id"
+    :is="item.component"
+    :style="getStyle(item.style)"
+    :attr="item.attr"
+  />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import { styleFit } from '@chant/common/utils'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
+export default {
+  setup() {
+    const componentList: any[] = []
+    // 获取样式
+    function getStyle(style: object) {
+      return styleFit.toPx(style)
+    }
+
+    return { componentList, getStyle }
   }
-})
+}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+* {
+  box-sizing: border-box;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 </style>

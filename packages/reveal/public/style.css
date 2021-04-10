@@ -1,0 +1,17 @@
+.bud-loading {
+  animation: loading 1s linear infinite;
+  height: 60px;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 60px;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
