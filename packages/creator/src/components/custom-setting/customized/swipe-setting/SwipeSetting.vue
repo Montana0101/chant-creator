@@ -48,9 +48,7 @@ export default {
       imgEditVisible: false
     })
     // current
-    const current = store.state.editor.current
-    const currentImgList = current.attr.imgList
-    const currentAttr = computed(() => current.attr)
+    const currentAttr = computed(() => store.state.editor.current.attr)
 
     // 图片编辑
     function onEdit(index: number) {
@@ -59,7 +57,7 @@ export default {
     }
     // 图片删除
     function onDelete(index: number) {
-      currentImgList.splice(index, 1)
+      currentAttr.value.imgList.splice(index, 1)
     }
     // 图片新增
     function onAdd() {
@@ -69,7 +67,7 @@ export default {
         url: '',
         imgUrl: ''
       }
-      currentImgList.push(row)
+      currentAttr.value.imgList.push(row)
     }
 
     return { state, currentAttr, onEdit, onDelete, onAdd }

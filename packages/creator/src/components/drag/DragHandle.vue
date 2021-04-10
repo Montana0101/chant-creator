@@ -28,6 +28,8 @@
 </template>
 
 <script lang="ts">
+import { computed } from 'vue'
+
 export default {
   name: 'drag-handle',
   props: {
@@ -35,6 +37,7 @@ export default {
   },
   emits: ['edit', 'delete', 'add'],
   setup(props, context) {
+    const list = computed(() => props.list)
     // 编辑
     function onEdit(index: number) {
       context.emit('edit', index)
@@ -48,7 +51,7 @@ export default {
       context.emit('add')
     }
 
-    return { list: props.list, onEdit, onDelete, onAdd }
+    return { list, onEdit, onDelete, onAdd }
   }
 }
 </script>

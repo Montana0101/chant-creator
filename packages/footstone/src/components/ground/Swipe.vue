@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { reactive } from 'vue'
+import { computed } from 'vue'
 import { Swipe, SwipeItem } from 'vant'
 import 'vant/es/swipe/style'
 import 'vant/es/swipe-item/style'
@@ -27,8 +27,7 @@ export default {
     attr: Object
   },
   setup(props) {
-    const attr = props.attr as Record<string, any>
-    const state = reactive(attr)
+    const state = computed(() => props.attr)
 
     return { state }
   }
