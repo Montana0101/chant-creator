@@ -12,9 +12,12 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData:
-          '@import "@/style/variable.scss";@import "@/style/mixin.scss";'
+          '@import "@/style/varicable.scss";@import "@/style/mixin.scss";'
       }
     }
   },
-  plugins: [vue()]
+  plugins: [vue()],
+  server: {
+    port: 3000
+  }
 })
