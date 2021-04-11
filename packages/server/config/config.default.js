@@ -13,10 +13,22 @@ module.exports = (appInfo) => {
   const config = (exports = {})
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1618048679799_7293'
+  config.keys = appInfo.name + '_1618131901803_8255'
 
   // add your middleware config here
   config.middleware = []
+  // 跨域
+  config.security = {
+    csrf: {
+      enable: false,
+      ignoreJSON: true
+    },
+    domainWhiteList: ['*']
+  }
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
+  }
 
   // add your user config here
   const userConfig = {

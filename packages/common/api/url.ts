@@ -3,7 +3,7 @@ type stageType = 'dev' | 'test' | 'prod' | 'local'
 const stage = import.meta.env.MODE as stageType
 
 const devUrl = {
-  base: 'https://dev.com/api/',
+  base: 'http://127.0.0.1:7001/',
   order: 'https://dev.order.com/api/'
 }
 

@@ -12,7 +12,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData:
-          '@import "@/style/varicable.scss";@import "@/style/mixin.scss";'
+          '@import "@/style/variable.scss";@import "@/style/mixin.scss";'
       }
     }
   },

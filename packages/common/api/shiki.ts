@@ -2,6 +2,7 @@ import qs from 'qs'
 import { Toast } from 'vant'
 import core from '../utils/core'
 import apiUrl from './url'
+import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
 
 // 返回类型枚举
 enum ResponseType {
@@ -115,9 +116,6 @@ class Shiki {
     if (typeof config.body === 'boolean') {
       config.tip = config.body
       delete config.body
-    }
-    if (config.body) {
-      config.body = JSON.stringify(config.body)
     }
     if (!config.headers) {
       config.headers = {

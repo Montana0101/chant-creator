@@ -66,7 +66,6 @@ export default {
     }
     // 设置当前index
     function setCurrentIndex(index: number) {
-      console.log(index)
       state.currentIndex = index
       store.commit('editor/setCurrent', state.list[index])
     }

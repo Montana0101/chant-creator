@@ -5,11 +5,22 @@
 </template>
 
 <script lang="ts">
+import { toRaw } from 'vue'
+import { useStore } from 'vuex'
+import shiki from '@chant/common/api/shiki'
+
 export default {
   name: 'nav-bar',
   setup() {
+    const store = useStore()
+
     // 保存
-    function onSave() {}
+    async function onSave() {
+      const componentList = store.state.editor.componentList
+      const params = toRaw(componentList)
+      const ret = await shiki.postCode('template/save', params)
+      console.log(ret)
+    }
 
     return { onSave }
   }

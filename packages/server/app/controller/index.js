@@ -8,7 +8,12 @@ class IndexController extends Controller {
     ctx.body = 'hi, egg'
   }
   // 保存模版
-  async save() {}
+  async save() {
+    const { ctx } = this
+    const body = ctx.request.body
+    const ret = await ctx.service.index.save(body)
+    ctx.body = ret
+  }
 }
 
 module.exports = IndexController
