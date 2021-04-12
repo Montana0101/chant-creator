@@ -13,7 +13,6 @@ export default {
   name: 'nav-bar',
   setup() {
     const store = useStore()
-
     // 保存
     async function onSave() {
       const componentList = store.state.editor.componentList

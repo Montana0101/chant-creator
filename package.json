@@ -2,8 +2,7 @@
   "name": "chant-creator",
   "private": true,
   "scripts": {
-    "dev": "node ./scripts/index.js",
-    "start": "lerna exec --scope creator -- yarn dev & lerna exec --scope reveal -- yarn dev & lerna exec --scope server -- yarn dev"
+    "start": "node ./scripts/index.js"
   },
   "workspaces": {
     "packages": [
@@ -17,6 +16,9 @@
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.24.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "execa": "^5.0.0",
     "lerna": "^4.0.0",
     "prettier": "^2.2.1",
