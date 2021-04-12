@@ -1,27 +1,35 @@
 <template>
   <div class="nav-bar">
-    <el-button @click="onSave" type="primary" size="small">保存模版</el-button>
+    <el-button @click="onTemplateSave" type="primary" size="small">
+      保存模版
+    </el-button>
   </div>
+  <!-- 保存模版 -->
+  <template-save v-if="state.templateVisible" v-model="state.templateVisible">
+  </template-save>
+
+  <test v-if="state.testVisible" v-model="state.testVisible"> </test>
 </template>
 
 <script lang="ts">
-import { toRaw } from 'vue'
-import { useStore } from 'vuex'
-import shiki from '@chant/common/api/shiki'
+import { reactive } from 'vue'
+import TemplateSave from './TemplateSave.vue' // 保存模版
+import Test from './Test.vue'
 
 export default {
   name: 'nav-bar',
+  components: { TemplateSave, Test },
   setup() {
-    const store = useStore()
+    const state = reactive({
+      templateVisible: false,
+      testVisible: true
+    })
     // 保存
-    async function onSave() {
-      const componentList = store.state.editor.componentList
-      const params = toRaw(componentList)
-      const ret = await shiki.postCode('template/save', params)
-      console.log(ret)
+    function onTemplateSave() {
+      state.templateVisible = true
     }
 
-    return { onSave }
+    return { state, onTemplateSave }
   }
 }
 </script>

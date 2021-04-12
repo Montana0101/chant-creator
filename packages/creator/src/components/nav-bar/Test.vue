@@ -2,11 +2,20 @@
   <el-dialog
     v-model="state.visible"
     :title="state.title"
-    destroy-on-close
     @open="onOpen"
     @close="onClose"
   >
-    <slot></slot>
+    <el-form label-width="80px" label-position="left">
+      <el-form-item label="模版名称1:">
+        <el-input v-model="state.title"></el-input>
+      </el-form-item>
+      <el-form-item label="模版分类1:">
+        <el-input v-model="state.describe"></el-input>
+      </el-form-item>
+      <el-form-item label="封面设置1:">
+        <div>封面</div>
+      </el-form-item>
+    </el-form>
     <template #footer>
       <el-button @click="onClose">取 消</el-button>
       <el-button @click="onNext" type="primary">确 定</el-button>
